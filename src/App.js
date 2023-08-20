@@ -1,24 +1,28 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Container from './app/components/Container';
+import Navbar from './app/components/Navbar';
+import 'semantic-ui-css/semantic.min.css'
+import { Routes, Route } from 'react-router-dom';
+import Flights from './app/components/Flights';
+import { ToastContainer } from 'react-toastify';
+
 
 function App() {
+  const[params,setParams] = useState();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <div className='App'>
+    <ToastContainer/>
+    <Navbar/>
+      <Routes>
+        <Route path='/' element={<Container setParams={setParams} />} />
+        <Route path='/flights' element={<Flights params={params} />} />
+      </Routes>
+      </div>
+  
+
+
   );
 }
 

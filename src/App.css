@@ -1,38 +1,41 @@
+/* App.css */
 .App {
-  text-align: center;
+  background: url('./background.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10; /* make sure navbar is on top */
+  
+}
+.navbar-nav-custom {
+  margin-left: auto !important;
+  margin-right: 250px;
+  color : white !important;
+  font-size: 1.5rem; 
+  padding: 0.5rem;  
+}
+.brand-custom{
+  margin-top: 50px;
+  margin-left: 70px;
+  color: white !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.item-custom{
+  color: white !important;
+}
+.navbar-nav-custom .nav-item a {
+  transition: transform 0.3s, color 0.3s; /* Smooth transition for hover effects */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar-nav-custom .nav-item a:hover {
+  color: #007BFF; /* Adjust the color as you like. This is a typical blue for hover effects */
+  transform: scale(1.6); /* Slightly increase size on hover */
 }
