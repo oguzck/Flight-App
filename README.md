@@ -44,6 +44,9 @@ Semantic UI React for UI components.
 React Toastify for toast notifications.
 JSON Server for creating a mock API.
 
-
+To test api you can try  
+IST -> JFK  1-09-2023
+JFK -> IST  5-09-2023
+or you can check db.json file to access more flight information . 
 
 
