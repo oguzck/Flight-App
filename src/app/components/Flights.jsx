@@ -52,7 +52,7 @@ export default function Flights({ params }) {
   }, [params]);
 
 
-  if (params == null) return <div>Not found</div>;
+  if (params == null) return <NotFoundComponent/>
 
   if (loading) return <Loader size='huge' style={{marginTop:'270px'}} active inline='centered' />
 
