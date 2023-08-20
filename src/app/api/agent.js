@@ -2,7 +2,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const baseURL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+const baseURL = 'http://localhost:5000';
 
 axios.defaults.baseURL = baseURL;
 
@@ -43,7 +43,6 @@ axios.interceptors.response.use(
         break;
     }
 
-    // If you decide to return the error, ensure you're returning a rejected promise
     return Promise.reject(error);
   }
 );

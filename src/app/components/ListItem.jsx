@@ -27,10 +27,6 @@ export default function ListItem({ flight, index }) {
                         <Icon name='marker' />{flight.departureAirport}<Icon name='arrow right' />{flight.arrivalAirport}
                     </span>
                 </Segment>
-                {/* <Segment secondary>
-                    {activity.attendees.length > 10}
-                    <ActivityListItemAttendee attendees={activity.attendees!} />
-                </Segment> */}
             </Segment.Group>
         </List.Item>
     )

@@ -13,7 +13,7 @@ export default function Flights({ params }) {
   useEffect(() => {
     if (!params) return;
 
-    const { departureAirport, arrivalAirport, departureDate } = params; // Destructure the required properties
+    const { departureAirport, arrivalAirport, departureDate } = params; 
     const formattedDate = departureDate ? `${departureDate.getFullYear()}-${String(departureDate.getMonth() + 1).padStart(2, '0')}-${String(departureDate.getDate()).padStart(2, '0')}` : null;
 
     setLoading(true);
